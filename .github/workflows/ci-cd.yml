@@ -21,4 +21,4 @@ jobs:
       env:
         token: ${{ secrets.DEPLOY_KEY }}
       run: |
-        ssh gce@34.93.137.125 "cd /mnt/disks/disk1/web/web/DrupalDev && sudo git pull origin master"
+        ssh proteandigitascorporate@34.93.137.125 "cd /mnt/disks/disk1/web/web/DrupalDev && sudo git pull origin master"
