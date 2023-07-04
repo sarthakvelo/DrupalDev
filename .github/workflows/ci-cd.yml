@@ -19,6 +19,6 @@ jobs:
     
     - name: Deploy to server
       env:
-        token: ${{ secrets.DEPLOY_KEY }}
+        GH_TOKEN: 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
       run: |
         ssh proteandigitascorporate@34.93.137.125 "cd /mnt/disks/disk1/web/web/DrupalDev && sudo git pull origin master"
