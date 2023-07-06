@@ -29,4 +29,4 @@ jobs:
         zone: 'asia-south1-c'
         user: 'proteandigitascorporate'
         ssh_private_key: '${{ secrets.ID_RAS }}'
-        command: 'cd /mnt/disks/disk1/web/web/DrupalDev && git pull origin master'
+        command: 'cd /mnt/disks/disk1/web/web/DrupalDev && sudo git pull origin master'
