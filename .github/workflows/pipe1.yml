@@ -27,5 +27,6 @@ jobs:
         project_id: 'protean-corporate-website-uat'
         instance_name: 'protean-vm-image'
         zone: 'asia-south1-c'
+        user: 'sarthak@velociters.com'
         ssh_private_key: '${{ secrets.ID_RAS }}'
         command: 'cd /mnt/disks/disk1/web/web/DrupalDev && git pull origin master'
