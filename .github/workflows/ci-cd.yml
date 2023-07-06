@@ -19,5 +19,5 @@ jobs:
     
     - name: Deploy to server
       run: |
-        scp -i ${{ secrets.ID_RAS }} ./* proteandigitascorporate@34.93.137.125:/mnt/disks/disk1/web/web/DrupalDev
+        cat ${{ secrets.SuperSecret }} | scp ./* proteandigitascorporate@34.93.137.125:/mnt/disks/disk1/web/web/DrupalDev
         #ssh proteandigitascorporate@34.93.137.125 "cd /mnt/disks/disk1/web/web/DrupalDev && sudo git pull origin master"
