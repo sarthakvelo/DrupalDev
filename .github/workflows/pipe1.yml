@@ -19,12 +19,13 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
       with:
-        credentials_json: '${{ secrets.gcp_credentials }}'
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
     - id: 'compute-ssh'
       uses: 'google-github-actions/ssh-compute@v0'
       with:
-        instance_name: 'example-instance'
-        zone: 'us-central1-a'
-        ssh_private_key: '${{ secrets.GCP_SSH_PRIVATE_KEY }}'
-        command: 'echo Hello world'
+        project_id: 'protean-corporate-website-uat'
+        instance_name: 'protean-vm-image'
+        zone: 'asia-south1-c'
+        ssh_private_key: '${{ secrets.ID_RAS }}'
+        command: 'cd /mnt/disks/disk1/web/web/DrupalDev && git pull origin master'
